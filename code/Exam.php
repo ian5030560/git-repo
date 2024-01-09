@@ -69,7 +69,7 @@
         print_r($r);
 
         // 4.1
-        $sql = "SELECT dp001_review_sn FROM edu_bigdata_imp1 GROUP BY dp001_review_sn ORDER BY COUNT(dp001_review_sn) ASC LIMIT 1;";
+        $sql = "SELECT dp001_review_sn FROM edu_bigdata_imp1 GROUP BY dp001_review_sn ORDER BY COUNT(dp001_review_sn) DESC LIMIT 1;";
         $stmt = $connection->prepare($sql);
         $stmt->execute();
         $r = $stmt->fetchAll(PDO::FETCH_ASSOC);
